@@ -1,8 +1,16 @@
 # Introduction : mon intention
-Ce projet me permet de créer une petite librairie CSS légère pour mes projets web. L'idée est de pouvoir utiliser le code CSS qui se situera dans le dossier "src" sur n'importe quelle appli web ou mobile afin d'avoir une mise en page agréable et UX/UI Friendly.
+Ce projet me permet de créer une petite librairie CSS légère pour mes projets web. L'idée est d'avoir un fichier CSS prêt à l'emploi (style.css) situé à la racine de ce répertoire et ainsi avoir une mise en page agréable et UX/UI Friendly pour tous mes projets web.
 
-# Technologie choisie
+Ce qu'on va retrouver dans ce répertoire simple niveau arborescence : 
+* Le fichier index.html pour visualiser les composants stylisés
+* Le fichier style.css qui contiendra le code CSS généré
+* Le dossier src qui contient mon code SASS
+
+
+# Technologie choisie pour créer cette librairie
 SASS : Pour faciliter la mise à jour et l'évolution du style CSS
+## Pourquoi ?
+Parce que même le CSS peut devenir complexe à lire et utiliser un préprocesseur me permettra de créer du CSS logique.
 
 # Composants souhaités
 * Un menu responsive
