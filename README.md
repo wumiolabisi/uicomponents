@@ -27,6 +27,9 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 * Des animations de conteneurs simples (images ou section)
 
 # Notes de réflexion/Suivi de développement
-* 14/05/2024 : Je pars sur un nommage anglophone, pour être raccord avec ce qu'il se fait généralement. Branche feature-titles done pour le moment => Je la merge à la main sans trop de risque.
+* 14/05/2024 : 
+  - Je pars sur un nommage anglophone, pour être raccord avec ce qu'il se fait généralement. Branche feature-titles done pour le moment => Je la merge à la main sans trop de risque.
+  - Création d'une classe 'tagline' pour les éventuelles phrases d'accroches.
+  - Pas de marges intérieures/extérieures sur le style des titres et textes, on gère ça dans les conteneurs.
 * 13/05/2024 : Première étape, bien structurer mon repo Git. Je pense créer une branche par composant. 
 
