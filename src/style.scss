@@ -1,5 +1,6 @@
 @use 'config' as *;
 @use 'fonts' as *;
+@use 'containers' as *;
 
 html,
 body {
@@ -49,4 +50,8 @@ p,
 span,
 article {
     font-size: 1.6rem;
+}
+
+.container {
+    width: $full-width;
 }
