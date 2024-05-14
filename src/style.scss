@@ -5,25 +5,34 @@ html,
 body {
     font-size: $dflt-font-size;
     font-family: $font-family;
-    @extend %font-thin;
+    @extend %font-regular;
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     @extend %font-bold;
 }
 
 h2 {
     font-size: 2.5rem;
+    @extend %font-regular;
 }
 
 h3 {
+    font-size: 2rem;
     @extend %font-bold;
 }
 
-h3,
+
 h4,
 h5,
 h6 {
     font-size: 2rem;
+    @extend %font-regular;
+}
+
+p,
+span,
+article {
+    font-size: 1.6rem;
 }

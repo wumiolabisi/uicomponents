@@ -17,7 +17,6 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 * SASS : Pour faciliter la mise à jour et l'évolution du style CSS
 * Font Awesome : Pour gagner du temps en utilisant des icônes préconçues
 
-
 # Composants souhaités
 * Un menu responsive
 * Des jolis boutons (radio, toggle, checkbox, options)
@@ -27,6 +26,7 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 * Des textes formatés (H1,...)
 * Des animations de conteneurs simples (images ou section)
 
-
-# Notes de réflexion
+# Notes de réflexion/Suivi de développement
+* 14/05/2024 : Je pars sur un nommage anglophone, pour être raccord avec ce qu'il se fait généralement. Branche feature-titles done pour le moment => Je la merge à la main sans trop de risque.
 * 13/05/2024 : Première étape, bien structurer mon repo Git. Je pense créer une branche par composant. 
+
