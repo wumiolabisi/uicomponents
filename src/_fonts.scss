@@ -1,0 +1,28 @@
+// Google Fonts : Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
+
+//Variables
+$font-family: "Poppins", sans-serif;
+$dflt-font-size: 62.5%;
+
+%font-thin {
+    font-weight: 100;
+    font-style: normal;
+}
+
+%font-light {
+    font-weight: 300;
+    font-style: normal;
+}
+
+%font-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+%font-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
