@@ -65,8 +65,8 @@ article {
 
 .col {
     @include display-flex(flex);
-    @include display-flex-direction(column);
-    @include flexboxWidth('.row-column')
+    @include display-flex-direction(row);
+    @include flexboxWidth('.row-column', '.row-column')
 }
 
 .row-column {

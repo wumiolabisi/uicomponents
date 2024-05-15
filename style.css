@@ -70,10 +70,13 @@ article {
 
 .col {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .col .row-column {
   width: 100%;
+}
+.col .row-column {
+  width: 90%;
 }
 
 .row-column {
