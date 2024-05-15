@@ -7,6 +7,7 @@ body {
     font-size: $dflt-font-size;
     font-family: $font-family;
     @extend %font-regular;
+    @extend %margin-padding-0;
 }
 
 h1,
@@ -52,6 +53,35 @@ article {
     font-size: 1.6rem;
 }
 
+/* CONTAINERS */
 .container {
     width: $full-width;
+}
+
+
+.col-inline {
+    @include display-flex(inline-flex);
+}
+
+.col {
+    @include display-flex(flex);
+    @include display-flex-direction(column);
+    @include flexboxWidth('.row-column')
+}
+
+.row-column {
+    @include display-flex(flex);
+    @include display-flex-direction(column);
+}
+
+.row-inline {
+    @include display-flex(flex);
+    @include display-flex-direction(row);
+}
+
+
+
+.flexbox-centered {
+    align-items: center;
+    justify-content: center
 }

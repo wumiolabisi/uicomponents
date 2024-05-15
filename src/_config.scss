@@ -11,3 +11,9 @@ $secondary-color: #664875;
 
 // Containers
 $full-width: 100%;
+
+//common classes
+%margin-padding-0 {
+    margin: 0;
+    padding: 0;
+}

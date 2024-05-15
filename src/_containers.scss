@@ -1,1 +1,15 @@
-// Faire une fonction qui choisit de mettre le bon flux selon la taille de l'écran ? Possible ?
+@mixin display-flex($style) {
+    display: $style;
+}
+
+@mixin display-flex-direction($direction) {
+    flex-direction: $direction;
+}
+
+@mixin flexboxWidth($items...) {
+    @for $i from 0 to length($items) {
+        #{nth($items, $i + 1)} {
+            width: 100% - $i * 10;
+        }
+    }
+}

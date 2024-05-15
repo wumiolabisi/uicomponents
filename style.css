@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap");
 html,
+body, h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+html,
 body, h2,
 .tagline, h4,
 h5,
@@ -12,19 +26,6 @@ h1, h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-article {
-  margin: 0;
-  padding: 0;
 }
 
 html,
@@ -56,4 +57,36 @@ p,
 span,
 article {
   font-size: 1.6rem;
+}
+
+/* CONTAINERS */
+.container {
+  width: 100%;
+}
+
+.col-inline {
+  display: inline-flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.col .row-column {
+  width: 100%;
+}
+
+.row-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-inline {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexbox-centered {
+  align-items: center;
+  justify-content: center;
 }

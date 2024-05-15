@@ -27,6 +27,8 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 * Des animations de conteneurs simples (images ou section)
 
 # Notes de réflexion/Suivi de développement
+* 15/05/2024 : 
+  - Gestion du placement des conteneurs grâce aux Flexbox 
 * 14/05/2024 - branche feature-containers : 
   - Responsive : Gestion du placement des conteneurs grâce aux Flexbox => en cours
   - UX/UI Friendly : Gestion des tailles et des espaces entre les différents éléments conteneurs => à faire 
