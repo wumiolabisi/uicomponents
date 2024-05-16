@@ -52,36 +52,3 @@ span,
 article {
     font-size: 1.6rem;
 }
-
-/* CONTAINERS */
-.container {
-    width: $full-width;
-}
-
-
-.col-inline {
-    @include display-flex(inline-flex);
-}
-
-.col {
-    @include display-flex(flex);
-    @include display-flex-direction(row);
-    @include flexboxWidth('.row-column', '.row-column')
-}
-
-.row-column {
-    @include display-flex(flex);
-    @include display-flex-direction(column);
-}
-
-.row-inline {
-    @include display-flex(flex);
-    @include display-flex-direction(row);
-}
-
-
-
-.flexbox-centered {
-    align-items: center;
-    justify-content: center
-}

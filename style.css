@@ -28,6 +28,63 @@ h1, h3 {
   font-style: normal;
 }
 
+/*
+** Responsiveness
+*
+/
+
+/* Breakpoints */
+/*
+** $breakpoint receive the breakpoint
+** the media query checks if min-width is equal or larger than the breakpoint
+** @content is all CSS property that has been sent when calling the mixin
+*/
+.display-flex, .container,
+.container .col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 87.5em) {
+  .main {
+    width: 1200px;
+  }
+}
+@media (min-width: 60em) {
+  .main {
+    width: 1000px;
+  }
+}
+
+h1 {
+  width: 100%;
+}
+
+.container,
+.container .col {
+  width: 100%;
+  flex-direction: row;
+}
+@media (min-width: 60em) {
+  .container .col {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media (min-width: 87.5em) {
+  .container .col {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+/*
+* Flexbox
+*/
 html,
 body {
   font-size: 62.5%;
@@ -57,39 +114,4 @@ p,
 span,
 article {
   font-size: 1.6rem;
-}
-
-/* CONTAINERS */
-.container {
-  width: 100%;
-}
-
-.col-inline {
-  display: inline-flex;
-}
-
-.col {
-  display: flex;
-  flex-direction: row;
-}
-.col .row-column {
-  width: 100%;
-}
-.col .row-column {
-  width: 90%;
-}
-
-.row-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.row-inline {
-  display: flex;
-  flex-direction: row;
-}
-
-.flexbox-centered {
-  align-items: center;
-  justify-content: center;
 }

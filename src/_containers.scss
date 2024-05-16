@@ -1,15 +1,74 @@
-@mixin display-flex($style) {
-    display: $style;
-}
+/*
+** Responsiveness
+*
+/
 
-@mixin display-flex-direction($direction) {
-    flex-direction: $direction;
-}
+/* Breakpoints */
+$xl: 87.5em; // 4k and hi-res desktop
+$lg: 60em; // 1080 and hi-res laptops
+$med: 40em; // hi-res tablets and low-res laptops
+$sm: 28em; // mobile and low-res tablets
+$xs: 20em; // mobile only
 
-@mixin flexboxWidth($items...) {
-    @for $i from 0 to length($items) {
-        #{nth($items, $i + 1)} {
-            width: 100% - $i * 10;
-        }
+/*
+** $breakpoint receive the breakpoint
+** the media query checks if min-width is equal or larger than the breakpoint
+** @content is all CSS property that has been sent when calling the mixin
+*/
+@mixin responsive($breakpoint) {
+    @media (min-width: + $breakpoint ) {
+        @content;
     }
 }
+
+.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+
+    @include responsive($xl) {
+        width: 1200px;
+    }
+
+    @include responsive($lg) {
+        width: 1000px;
+    }
+}
+
+h1 {
+    width: 100%;
+}
+
+.container {
+
+
+
+    &,
+    .col {
+        @extend .display-flex;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .col {
+        @include responsive($lg) {
+            flex-direction: row;
+            width: 100%;
+        }
+
+        @include responsive($xl) {
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+
+}
+
+
+/*
+* Flexbox
+*/
