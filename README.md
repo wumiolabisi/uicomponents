@@ -27,6 +27,9 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 * Des animations de conteneurs simples (images ou section)
 
 # Notes de réflexion/Suivi de développement
+* 16/05/2024
+  - Finalement, je reste sur l'idée de positionner les conteneurs comme si on était dans un tableau : il y a un conteneur principal pour toute la page (.main) qui reste à 100%. Il y a ensuite un conteneur pour mes éléments (.container) et des colonnes qui vont contenir les textes, images, etc (.col). C'est assez lisible, et largement inspiré des librairies CSS existantes.
+  - J'essaie d'être le plus mobile-first possible.
 * 15/05/2024 : 
   - Gestion du placement des conteneurs grâce aux Flexbox 
 * 14/05/2024 - branche feature-containers : 

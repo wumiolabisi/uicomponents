@@ -28,11 +28,6 @@ h1, h3 {
   font-style: normal;
 }
 
-/*
-** Responsiveness
-*
-/
-
 /* Breakpoints */
 /*
 ** $breakpoint receive the breakpoint
@@ -64,10 +59,15 @@ h1 {
   width: 100%;
 }
 
+.container {
+  flex-direction: row;
+}
 .container,
 .container .col {
   width: 100%;
-  flex-direction: row;
+}
+.container .col {
+  flex-direction: column;
 }
 @media (min-width: 60em) {
   .container .col {
@@ -82,9 +82,6 @@ h1 {
   }
 }
 
-/*
-* Flexbox
-*/
 html,
 body {
   font-size: 62.5%;
