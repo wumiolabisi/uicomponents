@@ -5,6 +5,47 @@ $med: 40em; // hi-res tablets and low-res laptops
 $sm: 28em; // mobile and low-res tablets
 $xs: 20em; // mobile only
 
+@mixin dynamicWidth() {
+    width: 98%;
+    padding: 1%;
+
+    &:not(:only-of-type) {
+        width: 48%;
+
+        &:nth-last-child(3) {
+            width: 31%;
+        }
+
+        &:nth-last-child(4) {
+            width: 23%;
+        }
+    }
+
+    &:nth-of-type(2) {
+        width: 48%;
+
+        &:not(:last-of-type) {
+            width: 23%;
+
+            &:nth-last-child(2) {
+                width: 31%;
+            }
+        }
+    }
+
+    &:nth-of-type(3) {
+        width: 31%;
+
+        &:not(:last-of-type) {
+            width: 23%;
+        }
+    }
+
+    &:nth-of-type(4) {
+        width: 23%;
+    }
+}
+
 /*
 ** $breakpoint receive the breakpoint
 ** the media query checks if min-width is equal or larger than the breakpoint
@@ -40,27 +81,34 @@ h1 {
 
 .container {
 
+
     flex-direction: row;
+    width: 100%;
+
 
     &,
     .col {
         @extend .display-flex;
-        width: 100%;
 
     }
 
     .col {
         flex-direction: column;
+        width: 90%;
+        padding: 2%;
 
         @include responsive($lg) {
             flex-direction: row;
-            width: 100%;
+            @include dynamicWidth;
+
         }
 
         @include responsive($xl) {
             flex-direction: row;
-            width: 100%;
+            @include dynamicWidth;
+
         }
     }
+
 
 }
