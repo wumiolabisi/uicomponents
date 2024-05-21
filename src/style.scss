@@ -53,6 +53,27 @@ article {
     font-size: 1.6rem;
 }
 
+img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center center;
+
+    @include responsive($md) {
+        height: 200px;
+
+    }
+
+    @include responsive($lg) {
+        height: 300px;
+
+    }
+
+    @include responsive($xl) {
+        height: 400px;
+
+    }
+}
 
 
 /** Animations **/
@@ -74,6 +95,12 @@ article {
     }
 }
 
+/**
+* I’m using 9 placeholder elements so I set the loop to stop at 9
+* and I’ve chosen an animation-delay which is based on 9. Because of
+* this the animation will have a consistent rhythm and by the 9th nth-child
+* the delay will be 0.5s (half the duration of this animation).
+*/
 @mixin fadeInAnimation($className) {
 
     @for $i from 1 through 9 {
@@ -87,6 +114,7 @@ article {
     }
 }
 
+//Animation for containers columns
 .col {
     @extend %fade-in;
     @include fadeInAnimation('&');

@@ -1,7 +1,7 @@
 /* Breakpoints */
 $xl: 87.5em; // 4k and hi-res desktop
 $lg: 60em; // 1080 and hi-res laptops
-$med: 40em; // hi-res tablets and low-res laptops
+$md: 40em; // hi-res tablets and low-res laptops
 $sm: 28em; // mobile and low-res tablets
 $xs: 20em; // mobile only
 
@@ -94,18 +94,25 @@ h1 {
 
     .col {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         padding: 2%;
+        align-content: center;
+        justify-content: center;
+
+
 
 
         @include responsive($lg) {
             flex-direction: row;
+            justify-content: start;
             @include dynamicWidth;
 
         }
 
         @include responsive($xl) {
             flex-direction: row;
+            justify-content: start;
+
             @include dynamicWidth;
 
         }
