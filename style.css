@@ -167,3 +167,47 @@ span,
 article {
   font-size: 1.6rem;
 }
+
+/** Animations **/
+.col {
+  animation: 0.3s ease-in-out both fade-in;
+  -o-animation: 0.3s ease-in-out both fade-in;
+  -moz-animation: 0.3s ease-in-out both fade-in;
+  -webkit-animation: 0.3s ease-in-out both fade-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.col:nth-child(1) {
+  animation-delay: 0.0555555556s;
+}
+.col:nth-child(2) {
+  animation-delay: 0.1111111111s;
+}
+.col:nth-child(3) {
+  animation-delay: 0.1666666667s;
+}
+.col:nth-child(4) {
+  animation-delay: 0.2222222222s;
+}
+.col:nth-child(5) {
+  animation-delay: 0.2777777778s;
+}
+.col:nth-child(6) {
+  animation-delay: 0.3333333333s;
+}
+.col:nth-child(7) {
+  animation-delay: 0.3888888889s;
+}
+.col:nth-child(8) {
+  animation-delay: 0.4444444444s;
+}
+.col:nth-child(9) {
+  animation-delay: 0.5s;
+}

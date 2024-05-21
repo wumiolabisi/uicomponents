@@ -97,6 +97,7 @@ h1 {
         width: 90%;
         padding: 2%;
 
+
         @include responsive($lg) {
             flex-direction: row;
             @include dynamicWidth;
