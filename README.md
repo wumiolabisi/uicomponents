@@ -26,6 +26,31 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 * Des textes formatés (H1,...)
 * Des animations de conteneurs simples (images ou section)
 
+# Les conteneurs
+Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera minimum 60em de largeur (grâce à la classe .main).
+
+## Des lignes et des colonnes
+* Le <body> contient un conteneur (div.container) qui définit les lignes de la page
+* Le conteneur div.container fait 100% de son parent, et peut contenir jusqu'à 4 colonnes (.col)
+```html
+<div class="container">
+        <div class="col">
+            <h2>Je suis la colonne 1/h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ad quis debitis rerum officia
+                accusantium
+                quod optio earum, excepturi consequuntur? Amet cum sapiente id harum neque illo assumenda error
+                voluptates!</p>
+        </div>
+        <div class="col">
+            <h2>Je suis la colonne 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ad quis debitis rerum officia
+                accusantium
+                quod optio earum, excepturi consequuntur? Amet cum sapiente id harum neque illo assumenda error
+                voluptates!
+            </p>
+        </div>
+```
+
 # Notes de réflexion/Suivi de développement
 * 16/05/2024
   - Finalement, je reste sur l'idée de positionner les conteneurs comme si on était dans un tableau : il y a un conteneur principal pour toute la page (.main) qui reste à 100%. Il y a ensuite un conteneur pour mes éléments (.container) et des colonnes qui vont contenir les textes, images, etc (.col). C'est assez lisible, et largement inspiré des librairies CSS existantes.
