@@ -115,7 +115,7 @@ img {
 }
 
 //Animation for containers columns
-.col {
+div.col {
     @extend %fade-in;
     @include fadeInAnimation('&');
 }
