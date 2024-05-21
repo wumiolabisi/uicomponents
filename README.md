@@ -52,6 +52,9 @@ Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera mini
 ```
 
 # Notes de réflexion/Suivi de développement
+* 21/05/2024
+  - Design des boutons : pour appliquer le style sur un bouton (ou en créer un sur une balise link), il faut utiliser la classe .btn. Si l'on souhaite un bouton rond, on ajoute la classe .btn-rounded. 
+  - Couleur : comme avec la plupart des librairies CSS, on peut utiliser la classe btn-primary ou btn-secondary pour définir la couleur du bouton.
 * 16/05/2024
   - Finalement, je reste sur l'idée de positionner les conteneurs comme si on était dans un tableau : il y a un conteneur principal pour toute la page (.main) qui reste à 100%. Il y a ensuite un conteneur pour mes éléments (.container) et des colonnes qui vont contenir les textes, images, etc (.col). C'est assez lisible, et largement inspiré des librairies CSS existantes.
   - J'essaie d'être le plus mobile-first possible.

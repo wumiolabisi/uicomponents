@@ -18,7 +18,7 @@ html,
 body, h2,
 .tagline, h4,
 h5,
-h6 {
+h6, .btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-secondary, .btn-secondary:hover, .btn-secondary:active {
   font-weight: 400;
   font-style: normal;
 }
@@ -35,7 +35,7 @@ h1, h3 {
 ** the media query checks if min-width is equal or larger than the breakpoint
 ** @content is all CSS property that has been sent when calling the mixin
 */
-.display-flex, .container,
+.display-flex, .btn, .btn-primary, .btn-secondary, .container,
 .container .col {
   display: flex;
   flex-wrap: wrap;
@@ -211,6 +211,59 @@ div.col {
     opacity: 1;
   }
 }
+/**
+** Buttons
+**/
+button,
+input[type=submit],
+input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.btn-rounded {
+  border-radius: 25px;
+}
+
+.btn, .btn-secondary, .btn-primary {
+  align-self: center;
+  width: 250px;
+  height: 50px;
+  justify-content: center;
+  align-content: center;
+  font-size: 16px;
+  color: white;
+  margin: 5px 0;
+}
+.btn:hover, .btn-secondary:hover, .btn-primary:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn-primary {
+  border: 1px solid #000000;
+  background-color: #000000;
+}
+.btn-primary:hover, .btn-primary:active {
+  background-color: white;
+  color: #000000 !important;
+}
+
+.btn-secondary {
+  border: 1px solid #664875;
+  background-color: #664875;
+}
+.btn-secondary:hover, .btn-secondary:active {
+  background-color: white;
+  color: #664875 !important;
+}
+
 /**
 * I’m using 9 placeholder elements so I set the loop to stop at 9
 * and I’ve chosen an animation-delay which is based on 9. Because of

@@ -14,3 +14,7 @@ $secondary-color: #664875;
     margin: 0;
     padding: 0;
 }
+
+@mixin radiusStyle($val) {
+    border-radius: #{$val}px;
+}
