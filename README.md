@@ -27,7 +27,7 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 * Des animations de conteneurs simples (images ou section)
 
 # Les conteneurs
-Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera minimum 60em de largeur (grâce à la classe .main).
+Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera minimum 60em de largeur (grâce à la classe .main). 
 
 ## Des lignes et des colonnes
 * Le <body> contient un conteneur (div.container) qui définit les lignes de la page
@@ -51,7 +51,7 @@ Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera mini
         </div>
 ```
 # Les images
-Les images peuvent avoir l'attribut cover avec la classe .img-cover ou contain avec la classe .img-contains
+La taille des images est par défaut définit à 100% en largeur et leur hauteur dépend de la taille de l'affichage. Les images peuvent avoir l'attribut cover avec la classe .img-cover ou contain avec la classe .img-contains. On peut également appliquer un effet de rondeur aux bords d'une image avec la classe .rounded
 
 # Notes de réflexion/Suivi de développement
 * 21/05/2024

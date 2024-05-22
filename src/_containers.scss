@@ -1,9 +1,4 @@
-/* Breakpoints */
-$xl: 87.5em; // 4k and hi-res desktop
-$lg: 60em; // 1080 and hi-res laptops
-$md: 40em; // hi-res tablets and low-res laptops
-$sm: 28em; // mobile and low-res tablets
-$xs: 20em; // mobile only
+@use 'config' as *;
 
 @mixin dynamicWidth() {
     width: 98%;
@@ -46,16 +41,7 @@ $xs: 20em; // mobile only
     }
 }
 
-/*
-** $breakpoint receive the breakpoint
-** the media query checks if min-width is equal or larger than the breakpoint
-** @content is all CSS property that has been sent when calling the mixin
-*/
-@mixin responsive($breakpoint) {
-    @media (min-width: + $breakpoint ) {
-        @content;
-    }
-}
+
 
 .display-flex {
     display: flex;

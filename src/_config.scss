@@ -9,12 +9,28 @@ $dflt-font-size: 62.5%;
 $primary-color: #000000;
 $secondary-color: #664875;
 
-//common classes
-%margin-padding-0 {
-    margin: 0;
-    padding: 0;
+/* Breakpoints */
+$xl: 87.5em; // 4k and hi-res desktop
+$lg: 60em; // 1080 and hi-res laptops
+$md: 40em; // hi-res tablets and low-res laptops
+$sm: 28em; // mobile and low-res tablets
+$xs: 20em; // mobile only
+
+/*
+** $breakpoint receive the breakpoint
+** the media query checks if min-width is equal or larger than the breakpoint
+** @content is all CSS property that has been sent when calling the mixin
+*/
+@mixin responsive($breakpoint) {
+    @media (min-width: $breakpoint ) {
+        @content;
+    }
 }
 
+
+/* Define rounded design for any element with border 
+*  Used in buttons (.btn-rounded)
+*/
 @mixin radiusStyle($val) {
     border-radius: #{$val}px;
 }

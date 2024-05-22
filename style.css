@@ -1,19 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap");
-html,
-body, h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-article {
-  margin: 0;
-  padding: 0;
-}
-
+/* Breakpoints */
+/*
+** $breakpoint receive the breakpoint
+** the media query checks if min-width is equal or larger than the breakpoint
+** @content is all CSS property that has been sent when calling the mixin
+*/
+/* Define rounded design for any element with border 
+*  Used in buttons (.btn-rounded)
+*/
 html,
 body, h2,
 .tagline, h4,
@@ -34,12 +29,6 @@ h1 {
   padding: 1%;
 }
 
-/* Breakpoints */
-/*
-** $breakpoint receive the breakpoint
-** the media query checks if min-width is equal or larger than the breakpoint
-** @content is all CSS property that has been sent when calling the mixin
-*/
 .display-flex, .btn, .btn-primary, .btn-secondary, .container,
 .container .col {
   display: flex;
@@ -149,6 +138,25 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+article, html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.rounded {
+  border-radius: 25px;
+}
+
+/* Fonts*/
 h1 {
   font-size: 3.5rem;
 }
@@ -192,22 +200,6 @@ img.img-contain {
   }
 }
 
-/** Animations **/
-div.col {
-  animation: 0.3s ease-in-out both fade-in;
-  -o-animation: 0.3s ease-in-out both fade-in;
-  -moz-animation: 0.3s ease-in-out both fade-in;
-  -webkit-animation: 0.3s ease-in-out both fade-in;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /**
 ** Buttons
 **/
@@ -222,10 +214,6 @@ input[type=reset] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
-}
-
-.btn-rounded {
-  border-radius: 25px;
 }
 
 .btn, .btn-secondary, .btn-primary {
@@ -261,6 +249,22 @@ input[type=reset] {
   color: #664875 !important;
 }
 
+/** Animations **/
+div.col {
+  animation: 0.3s ease-in-out both fade-in;
+  -o-animation: 0.3s ease-in-out both fade-in;
+  -moz-animation: 0.3s ease-in-out both fade-in;
+  -webkit-animation: 0.3s ease-in-out both fade-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /**
 * I’m using 9 placeholder elements so I set the loop to stop at 9
 * and I’ve chosen an animation-delay which is based on 9. Because of

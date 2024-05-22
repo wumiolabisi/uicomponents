@@ -10,6 +10,17 @@ body {
     @extend %margin-padding-0;
 }
 
+//common classes
+%margin-padding-0 {
+    margin: 0;
+    padding: 0;
+}
+
+.rounded {
+    @include radiusStyle(25);
+}
+
+/* Fonts*/
 h1,
 h2,
 h3,
@@ -79,24 +90,7 @@ img {
 }
 
 
-/** Animations **/
 
-%fade-in {
-    animation: .3s ease-in-out both fade-in;
-    -o-animation: .3s ease-in-out both fade-in;
-    -moz-animation: .3s ease-in-out both fade-in;
-    -webkit-animation: .3s ease-in-out both fade-in;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 /**
 ** Buttons
@@ -114,9 +108,7 @@ input[type="reset"] {
     outline: inherit;
 }
 
-.btn-rounded {
-    @include radiusStyle(25);
-}
+
 
 .btn {
     @extend .display-flex;
@@ -161,6 +153,25 @@ input[type="reset"] {
         @extend %font-regular;
         background-color: white;
         color: $secondary-color !important;
+    }
+}
+
+/** Animations **/
+
+%fade-in {
+    animation: .3s ease-in-out both fade-in;
+    -o-animation: .3s ease-in-out both fade-in;
+    -moz-animation: .3s ease-in-out both fade-in;
+    -webkit-animation: .3s ease-in-out both fade-in;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
