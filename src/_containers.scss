@@ -50,7 +50,7 @@
 
 .main {
     width: 100%;
-    margin: 0 auto;
+    margin: 120px auto 0px auto;
 
     @include responsive($xl) {
         width: 1200px;
@@ -103,4 +103,38 @@
     }
 
 
+}
+
+nav {
+
+    width: 98%;
+    padding: 0 1%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    ul {
+        list-style: none;
+        @extend .display-flex;
+        flex-direction: row;
+        padding: 0;
+        justify-content: left;
+        align-items: center;
+
+        li {
+            margin: 0 15px;
+
+            & a:hover {
+                font-weight: 700;
+            }
+
+        }
+
+        & li:last-child {
+            margin-left: auto;
+
+        }
+    }
 }

@@ -8,11 +8,14 @@
     padding: 0;
 }
 
+.rounded {
+    @include radiusStyle(25);
+}
+
 // end common classes
 
 * {
     font-family: $font-family;
-
 }
 
 html,
@@ -22,11 +25,18 @@ body {
     @extend .margin-padding-0;
 }
 
-.rounded {
-    @include radiusStyle(25);
-}
 
 /* Fonts*/
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: $primary-color;
+    transform: 0.4s;
+}
+
+
 h1,
 h2,
 h3,
@@ -66,7 +76,8 @@ h3 {
 
 h4,
 h5,
-h6 {
+h6,
+li {
     font-size: 2rem;
     @extend %font-regular;
 }
@@ -100,6 +111,11 @@ img {
     @include responsive($md) {
         height: 400px;
 
+    }
+
+    &.logo {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -199,6 +215,7 @@ fieldset div {
 
     select {
         outline: 0;
+        min-width: 200px;
     }
 }
 

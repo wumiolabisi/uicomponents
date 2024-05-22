@@ -13,7 +13,8 @@ html,
 body, h2,
 .tagline, h4,
 h5,
-h6, .btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .select {
+h6,
+li, .btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .select {
   font-weight: 400;
   font-style: normal;
 }
@@ -24,7 +25,7 @@ h1, h3 {
   font-style: normal;
 }
 
-.display-flex, .btn, .btn-primary, .btn-secondary, .container,
+.display-flex, .btn, .btn-primary, .btn-secondary, nav ul, .container,
 .container .col {
   display: flex;
   flex-wrap: wrap;
@@ -32,7 +33,7 @@ h1, h3 {
 
 .main {
   width: 100%;
-  margin: 0 auto;
+  margin: 120px auto 0px auto;
 }
 @media (min-width: 87.5em) {
   .main {
@@ -127,6 +128,32 @@ h1, h3 {
   }
 }
 
+nav {
+  width: 98%;
+  padding: 0 1%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+nav ul {
+  list-style: none;
+  flex-direction: row;
+  padding: 0;
+  justify-content: left;
+  align-items: center;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a:hover {
+  font-weight: 700;
+}
+nav ul li:last-child {
+  margin-left: auto;
+}
+
 .margin-padding-0, h1,
 h2,
 h3,
@@ -141,6 +168,10 @@ body {
   padding: 0;
 }
 
+.rounded {
+  border-radius: 25px;
+}
+
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -150,11 +181,16 @@ body {
   font-size: 62.5%;
 }
 
-.rounded {
-  border-radius: 25px;
+/* Fonts*/
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #a17007;
+  transform: 0.4s;
 }
 
-/* Fonts*/
 h1,
 h2,
 h3,
@@ -197,7 +233,8 @@ h3 {
 
 h4,
 h5,
-h6 {
+h6,
+li {
   font-size: 2rem;
 }
 
@@ -229,6 +266,10 @@ img.img-contain {
   img {
     height: 400px;
   }
+}
+img.logo {
+  width: 100px;
+  height: 100px;
 }
 
 /**
@@ -303,6 +344,7 @@ fieldset div {
 }
 .select select {
   outline: 0;
+  min-width: 200px;
 }
 
 input[type=radio],
