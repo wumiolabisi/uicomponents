@@ -50,6 +50,8 @@ Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera mini
             </p>
         </div>
 ```
+# Les images
+Les images peuvent avoir l'attribut cover avec la classe .img-cover ou contain avec la classe .img-contains
 
 # Notes de réflexion/Suivi de développement
 * 21/05/2024
