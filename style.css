@@ -13,7 +13,7 @@ html,
 body, h2,
 .tagline, h4,
 h5,
-h6, .btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-secondary, .btn-secondary:hover, .btn-secondary:active {
+h6, .btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .select {
   font-weight: 400;
   font-style: normal;
 }
@@ -22,11 +22,6 @@ h1, h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
-
-h1 {
-  width: 100%;
-  padding: 1%;
 }
 
 .display-flex, .btn, .btn-primary, .btn-secondary, .container,
@@ -132,13 +127,7 @@ h1 {
   }
 }
 
-html,
-body {
-  font-size: 62.5%;
-  font-family: "Poppins", sans-serif;
-}
-
-h1,
+.margin-padding-0, h1,
 h2,
 h3,
 h4,
@@ -152,12 +141,48 @@ body {
   padding: 0;
 }
 
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  font-size: 62.5%;
+}
+
 .rounded {
   border-radius: 25px;
 }
 
 /* Fonts*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+article {
+  text-align: center;
+}
+@media (min-width: 40em) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  article {
+    text-align: left;
+  }
+}
+
 h1 {
+  width: 100%;
+  padding: 1%;
   font-size: 3.5rem;
 }
 
@@ -178,8 +203,14 @@ h6 {
 
 p,
 span,
-article {
+article,
+label,
+select {
   font-size: 1.6rem;
+}
+
+.small-text {
+  font-size: 13px;
 }
 
 img {
@@ -232,12 +263,12 @@ input[type=reset] {
 }
 
 .btn-primary {
-  border: 1px solid #000000;
-  background-color: #000000;
+  border: 1px solid #a17007;
+  background-color: #a17007;
 }
 .btn-primary:hover, .btn-primary:active {
   background-color: white;
-  color: #000000 !important;
+  color: #a17007 !important;
 }
 
 .btn-secondary {
@@ -247,6 +278,40 @@ input[type=reset] {
 .btn-secondary:hover, .btn-secondary:active {
   background-color: white;
   color: #664875 !important;
+}
+
+.btn-check, fieldset,
+select {
+  padding: 5px 10px;
+  border: 1px solid #e9e8e8;
+  background-color: #ffffff;
+  margin: 2%;
+}
+
+fieldset div {
+  margin-bottom: 10px;
+}
+
+.select {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 40em) {
+  .select {
+    text-align: left;
+  }
+}
+.select select {
+  outline: 0;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  accent-color: #a17007;
+}
+input[type=radio]:checked + label,
+input[type=checkbox]:checked + label {
+  color: #a17007;
 }
 
 /** Animations **/

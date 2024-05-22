@@ -2,18 +2,24 @@
 @use 'fonts' as *;
 @use 'containers' as *;
 
+//common classes
+.margin-padding-0 {
+    margin: 0;
+    padding: 0;
+}
+
+// end common classes
+
+* {
+    font-family: $font-family;
+
+}
+
 html,
 body {
     font-size: $dflt-font-size;
-    font-family: $font-family;
     @extend %font-regular;
-    @extend %margin-padding-0;
-}
-
-//common classes
-%margin-padding-0 {
-    margin: 0;
-    padding: 0;
+    @extend .margin-padding-0;
 }
 
 .rounded {
@@ -30,10 +36,17 @@ h6,
 p,
 span,
 article {
-    @extend %margin-padding-0;
+    @extend .margin-padding-0;
+    text-align: center;
+
+    @include responsive($md) {
+        text-align: left;
+    }
 }
 
 h1 {
+    width: 100%;
+    padding: 1%;
     font-size: 3.5rem;
     @extend %font-bold;
 
@@ -60,8 +73,14 @@ h6 {
 
 p,
 span,
-article {
+article,
+label,
+select {
     font-size: 1.6rem;
+}
+
+.small-text {
+    font-size: 13px;
 }
 
 img {
@@ -69,13 +88,11 @@ img {
     height: 300px;
 
     &.img-cover {
-
         object-fit: cover;
         object-position: center center;
     }
 
     &.img-contain {
-
         object-fit: contain;
         object-position: center center;
     }
@@ -84,9 +101,6 @@ img {
         height: 400px;
 
     }
-
-
-
 }
 
 
@@ -155,6 +169,52 @@ input[type="reset"] {
         color: $secondary-color !important;
     }
 }
+
+.btn-check {
+    padding: 5px 10px;
+    border: 1px solid #e9e8e8;
+    background-color: #ffffff;
+    margin: 2%;
+}
+
+fieldset,
+select {
+    @extend .btn-check;
+}
+
+fieldset div {
+    margin-bottom: 10px;
+}
+
+//Select options
+.select {
+    @extend %font-regular;
+    width: 100%;
+    text-align: center;
+
+
+    @include responsive($md) {
+        text-align: left;
+    }
+
+    select {
+        outline: 0;
+    }
+}
+
+
+
+//radio
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: $primary-color;
+
+    &:checked+label {
+        color: $primary-color;
+    }
+}
+
+
 
 /** Animations **/
 
