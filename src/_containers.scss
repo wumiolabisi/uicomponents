@@ -141,7 +141,7 @@
 nav {
 
     width: 98%;
-    padding: 0 1%;
+    padding: 10px;
     overflow: hidden;
     position: fixed;
     height: 80px;
@@ -151,14 +151,21 @@ nav {
     min-height: 50px;
     background-color: $general-bg-color;
 
-    .navbar:target {
-        transform: translateY(0);
+    @media (max-width: $md) {
+        .navbar:target {
+            transform: translateY(0);
+            position: fixed;
 
+        }
     }
 
     @include responsive($md) {
-        height: 100%;
+        height: auto;
+
+
     }
+
+
 
     ul {
         list-style: none;
@@ -166,13 +173,15 @@ nav {
         flex-direction: column;
         padding: 0;
         width: 100%;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         align-content: center;
+        background-color: $general-bg-color;
         /* animate slide up/down */
         transform: translateY(-100%);
         transition: transform 0.2s ease;
         position: relative;
+        left: 0;
         height: 100vh;
 
         @include responsive($md) {
@@ -181,8 +190,6 @@ nav {
             align-items: center;
             transform: translateY(0);
             height: 100%;
-
-
 
             & li:last-child {
                 margin-left: auto;
