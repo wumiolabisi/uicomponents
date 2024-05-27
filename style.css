@@ -14,7 +14,7 @@ body, h2,
 .tagline, h4,
 h5,
 h6,
-li, .btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .select {
+li, .btn, .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .select {
   font-weight: 400;
   font-style: normal;
 }
@@ -25,7 +25,7 @@ h1, h3 {
   font-style: normal;
 }
 
-.display-flex, .btn, .btn-primary, .btn-secondary, nav ul, .container,
+.display-flex, .btn, .btn-primary, .btn-secondary, .display-mobile-only, .close-icon, nav ul, .container,
 .container .col {
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +49,7 @@ h1, h3 {
 .container {
   flex-direction: row;
   width: 100%;
+  background-color: #ffffff;
 }
 .container .col {
   flex-direction: column;
@@ -128,6 +129,7 @@ h1, h3 {
   }
 }
 
+/* NAVBAR */
 nav {
   width: 98%;
   padding: 0 1%;
@@ -136,13 +138,18 @@ nav {
   top: 0;
   left: 0;
   z-index: 2;
+  background-color: #ffffff;
+}
+nav a > i {
+  cursor: pointer;
 }
 nav ul {
   list-style: none;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
+  align-content: center;
 }
 nav ul li {
   margin: 0 15px;
@@ -150,8 +157,34 @@ nav ul li {
 nav ul li a:hover {
   font-weight: 700;
 }
-nav ul li:last-child {
-  margin-left: auto;
+@media (min-width: 40em) {
+  nav ul {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+  nav ul li:last-child {
+    margin-left: auto;
+  }
+}
+
+.modal {
+  position: absolute;
+  height: 100vh;
+}
+
+@media (min-width: 40em) {
+  .display-mobile-only, .close-icon {
+    display: none;
+  }
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2%;
+  font-size: 50px;
 }
 
 .margin-padding-0, h1,
@@ -170,6 +203,10 @@ body {
 
 .rounded {
   border-radius: 25px;
+}
+
+.display-none {
+  display: none;
 }
 
 * {
@@ -307,7 +344,7 @@ input[type=reset] {
   border: 1px solid #a17007;
   background-color: #a17007;
 }
-.btn-primary:hover, .btn-primary:active {
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited {
   background-color: white;
   color: #a17007 !important;
 }

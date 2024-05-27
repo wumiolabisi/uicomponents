@@ -12,6 +12,10 @@
     @include radiusStyle(25);
 }
 
+.display-none {
+    display: none;
+}
+
 // end common classes
 
 * {
@@ -166,7 +170,8 @@ input[type="reset"] {
     background-color: $primary-color;
 
     &:hover,
-    &:active {
+    &:active,
+    &:visited {
         @extend %font-regular;
         background-color: white;
         color: $primary-color !important;
