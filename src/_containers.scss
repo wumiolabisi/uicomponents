@@ -106,56 +106,6 @@
 }
 
 /* NAVBAR */
-nav {
-
-    width: 98%;
-    padding: 0 1%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background-color: $general-bg-color;
-
-
-    a>i {
-        cursor: pointer;
-    }
-
-    ul {
-        list-style: none;
-        @extend .display-flex;
-        flex-direction: column;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-
-
-        li {
-            margin: 0 15px;
-
-            & a:hover {
-                font-weight: 700;
-            }
-
-        }
-
-
-
-        @include responsive($md) {
-            flex-direction: row;
-            justify-content: left;
-            align-items: center;
-
-            & li:last-child {
-                margin-left: auto;
-
-            }
-        }
-    }
-}
-
 .modal {
     position: absolute;
     height: 100vh;
@@ -170,11 +120,72 @@ nav {
     }
 }
 
-.close-icon {
+.close-menu,
+.open-menu {
     position: absolute;
-    top: 0;
-    right: 0;
     margin: 2%;
     font-size: 50px;
     @extend .display-mobile-only;
+}
+
+.open-menu {
+    top: 0;
+    left: 0;
+}
+
+.close-menu {
+    top: 0;
+    right: 0;
+}
+
+nav {
+
+    width: 98%;
+    padding: 0 1%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: $general-bg-color;
+
+    .navbar:target {
+        transform: translateY(0);
+
+    }
+
+    ul {
+        list-style: none;
+        @extend .display-flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        /* animate slide up/down */
+        transform: translateY(-100%);
+        transition: transform 0.2s ease;
+
+        @include responsive($md) {
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            transform: translateY(0);
+
+            & li:last-child {
+                margin-left: auto;
+
+            }
+        }
+
+        li {
+            margin: 0 15px;
+
+            & a:hover {
+                font-weight: 700;
+            }
+
+        }
+
+    }
 }
