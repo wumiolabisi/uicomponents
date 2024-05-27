@@ -54,6 +54,8 @@ Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera mini
 La taille des images est par défaut définit à 100% en largeur et leur hauteur dépend de la taille de l'affichage. Les images peuvent avoir l'attribut cover avec la classe .img-cover ou contain avec la classe .img-contains. On peut également appliquer un effet de rondeur aux bords d'une image avec la classe .rounded
 
 # Notes de réflexion/Suivi de développement
+* 27/05/2024
+  - Mise en place de la navbar responsive en CSS uniquement 
 * 21/05/2024
   - Design des boutons : pour appliquer le style sur un bouton (ou en créer un sur une balise link), il faut utiliser la classe .btn. Si l'on souhaite un bouton rond, on ajoute la classe .btn-rounded. 
   - Couleur : comme avec la plupart des librairies CSS, on peut utiliser la classe btn-primary ou btn-secondary pour définir la couleur du bouton.

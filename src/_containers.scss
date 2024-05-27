@@ -144,9 +144,11 @@ nav {
     padding: 0 1%;
     overflow: hidden;
     position: fixed;
+    height: 80px;
     top: 0;
     left: 0;
     z-index: 1000;
+    min-height: 50px;
     background-color: $general-bg-color;
 
     .navbar:target {
@@ -154,23 +156,33 @@ nav {
 
     }
 
+    @include responsive($md) {
+        height: 100%;
+    }
+
     ul {
         list-style: none;
         @extend .display-flex;
         flex-direction: column;
         padding: 0;
+        width: 100%;
         justify-content: center;
         align-items: center;
         align-content: center;
         /* animate slide up/down */
         transform: translateY(-100%);
         transition: transform 0.2s ease;
+        position: relative;
+        height: 100vh;
 
         @include responsive($md) {
             flex-direction: row;
             justify-content: left;
             align-items: center;
             transform: translateY(0);
+            height: 100%;
+
+
 
             & li:last-child {
                 margin-left: auto;
