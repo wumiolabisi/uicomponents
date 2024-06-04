@@ -63,7 +63,7 @@
 
     flex-direction: row;
     width: 100%;
-    background-color: $general-bg-color;
+    background-color: inherit;
     position: relative;
 
     @include responsive($lg) {
@@ -213,6 +213,7 @@ footer {
     background-color: $secondary-color;
     height: 100px;
     width: 100%;
+    padding: 2% 0;
 
 
 }
