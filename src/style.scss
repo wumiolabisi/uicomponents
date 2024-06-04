@@ -120,6 +120,11 @@ img {
     &.logo {
         width: 100px;
         height: 100px;
+
+        @include responsive($md) {
+            width: 70px;
+            height: 70px;
+        }
     }
 }
 
