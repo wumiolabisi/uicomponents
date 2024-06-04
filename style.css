@@ -36,22 +36,18 @@ h1, h3 {
   width: 100%;
   margin: 120px auto 0px auto;
 }
-@media (min-width: 87.5em) {
-  .main {
-    width: 1200px;
-  }
-}
-@media (min-width: 60em) {
-  .main {
-    width: 1000px;
-  }
-}
 
 .container {
   flex-direction: row;
   width: 100%;
   background-color: #ffffff;
   position: relative;
+}
+@media (min-width: 60em) {
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
 }
 .container .col {
   flex-direction: column;
@@ -61,41 +57,6 @@ h1, h3 {
   justify-content: center;
 }
 @media (min-width: 60em) {
-  .container .col {
-    flex-direction: row;
-    justify-content: start;
-    width: 98%;
-    padding: 1%;
-  }
-  .container .col:not(:only-of-type) {
-    width: 48%;
-  }
-  .container .col:not(:only-of-type):nth-last-child(3) {
-    width: 31%;
-  }
-  .container .col:not(:only-of-type):nth-last-child(4) {
-    width: 23%;
-  }
-  .container .col:nth-of-type(2) {
-    width: 48%;
-  }
-  .container .col:nth-of-type(2):not(:last-of-type) {
-    width: 23%;
-  }
-  .container .col:nth-of-type(2):not(:last-of-type):nth-last-child(2) {
-    width: 31%;
-  }
-  .container .col:nth-of-type(3) {
-    width: 31%;
-  }
-  .container .col:nth-of-type(3):not(:last-of-type) {
-    width: 23%;
-  }
-  .container .col:nth-of-type(4) {
-    width: 23%;
-  }
-}
-@media (min-width: 87.5em) {
   .container .col {
     flex-direction: row;
     justify-content: start;
@@ -228,13 +189,6 @@ footer {
   height: 100px;
   width: 100%;
 }
-@media (min-width: 40em) {
-  footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-}
 
 .margin-padding-0, h1,
 h2,
@@ -265,6 +219,7 @@ body {
 html,
 body {
   font-size: 62.5%;
+  height: 100%;
 }
 
 /* Fonts*/
@@ -367,9 +322,7 @@ img.logo {
 /**
 ** Buttons
 **/
-button,
-input[type=submit],
-input[type=reset] {
+button {
   background: none;
   color: inherit;
   border: none;
@@ -446,6 +399,28 @@ input[type=checkbox] {
 input[type=radio]:checked + label,
 input[type=checkbox]:checked + label {
   color: #a17007;
+}
+
+form {
+  width: 100%;
+}
+
+input[type]:not([type=search]):not([type=url]):not([type=hidden]):not([type=submit]):not([type=radio]):not([type=checkbox]) {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px;
+  border-color: #664875;
+  border-style: solid;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+}
+
+.form-item {
+  margin: 20px 0;
 }
 
 /** Animations **/
