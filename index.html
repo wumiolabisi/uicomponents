@@ -12,77 +12,90 @@
 
 <body class="main">
 
+    <nav>
+        <a class="open-menu" alt="Ouvrir le menu" href="#navbar"><i class="fa-solid fa-bars-staggered"></i></a>
+        <ul id="navbar" class="navbar">
+            <li><a href="#"><img src="img/logo-canva.png" class="logo"></a></li>
+            <li><a href="#romans">Romans</a></li>
+            <li><a href="#bd">B.D.</a></li>
+            <li><a href="#apprentissage">Apprentissage</a></li>
+            <li><a href="#jeunesse">Spécial Jeunesse</a></li>
+            <li><a href="#myForm" class="btn-primary">Nous contacter</a></li>
+            <a class="close-menu" alt="Fermer le menu" href="#"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
 
-    <div class="container">
+    </nav>
+    <div class="bg-container"
+        style="background-image: url(img/pexels-minan1398-1254044.jpg);background-repeat: no-repeat;background-size: cover;">
+        <div class="container">
 
-        <nav>
-            <a class="open-menu" alt="Ouvrir le menu" href="#navbar"><i class="fa-solid fa-bars-staggered"></i></a>
-            <ul id="navbar" class="navbar">
-                <li><a href="#"><img src="https://placehold.co/70x70" class="logo"></a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-                <li><a href="#">Item 4</a></li>
-                <li><a href="#" class="btn-primary">Item 5</a></li>
-                <a class="close-menu" alt="Fermer le menu" href="#"><i class="fa-solid fa-xmark"></i></a>
-            </ul>
 
-        </nav>
+            <div class="col col-items-centered">
+                <h1 class="white-color text-center">Trouvez votre aventure à lire dans notre librairie située à
+                    Montreuil - Croix de
+                    Chavaux</h1>
+                <p class="white-color text-center">Plongez dans un univers littéraire unique avec notre sélection de
+                    livres soigneusement choisis.</p>
 
-        <h1>Les blocs classiques</h1>
+                <a class="btn-primary" href="#myForm">Contactez-nous</a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container pad-top-5" id="romans">
 
         <div class="col">
-            <img src="https://placehold.co/600x400" class="img-cover img-300" />
+            <img src="img/pexels-kseniachernaya-3965493.jpg" class="img-cover img-300" />
 
         </div>
         <div class="col">
-            <h2>Je suis la boxe de droite</h2>
-            <div class="select">
-                <select>
-                    <option value="" disabled selected>Select</option>
-                    <option value="1">Choix 1</option>
-                    <option value="2">Choix 2</option>
-                </select>
-            </div>
-            <fieldset>
-                <legend class="small-text">Radio</legend>
-                <div>
-                    <input type="radio" id="1" name="radio-button" value="Oui" checked />
-                    <label for="1">Oui</label>
-                </div>
-                <div>
-                    <input type="radio" id="0" name="radio-button" value="Non" />
-                    <label for="0">Non</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend class="small-text">Checkbox</legend>
-                <div>
-                    <input type="checkbox" id="scales" name="scales" checked />
-                    <label for="scales">Scales</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="horns" name="horns" />
-                    <label for="horns">Horns</label>
-                </div>
-            </fieldset>
+            <h2>Un endroit idéal pour découvrir des auteur·ices indépendant·es</h2>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ad quis debitis rerum officia
                 accusantium
                 quod optio earum, excepturi consequuntur? Amet cum sapiente id harum neque illo assumenda error
                 voluptates!
             </p>
-            <button class="btn-primary">Bouton cliquable</button>
-            <a class="btn-secondary">Lien bouton</a>
+            <a class="btn-primary" href="#myForm">En savoir plus</a>
 
 
         </div>
+
+    </div>
+    <div class="container pad-top-5">
+        <div class="col"> <img src="img/pexels-ena-marinkovic-1814213-3643828(1).jpg" class="img-cover img-300" /></div>
+        <div class="col"> <img src="img/pexels-mikhail-nilov-9159665.jpg" class="img-cover img-300" /></div>
+        <div class="col"> <img src="img/pexels-niezam-16516.jpg" class="img-cover img-300" /></div>
+        <div class="col"> <img src="img/pexels-lina-1741231.jpg" class="img-cover img-300" /></div>
+    </div>
+    <div class="container pad-top-5" id="bd">
+        <div class="col">
+            <h2>Bandes dessinnées incountournables</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ad quis debitis rerum officia
+                accusantium
+                quod optio earum, excepturi consequuntur? Amet cum sapiente id harum neque illo assumenda error
+                voluptates!
+            </p>
+            <a class="btn-primary" href="#myForm">En savoir plus</a>
+
+
+        </div>
+        <div class="col">
+            <img src="img/pexels-niezam-16516.jpg" class="img-cover img-300" />
+
+        </div>
+
 
     </div>
 
     <div class="container">
 
         <div class="col">
-            <h2>Un formulaire</h2>
+            <h2 id="myForm">Contactez-nous pour toute question ou recommandation</h2>
             <form action="" method="get" class="form-area">
                 <div class="form-item">
                     <label for="name">Nom : </label>
@@ -93,9 +106,51 @@
                     <input type="email" name="email" id="email" required placeholder="Ecrivez votre e-mail ici" />
                 </div>
                 <div class="form-item">
-                    <label for="message">Dites-nous tout :</label>
-                    <textarea id="message" name="message" placeholder="Ecrivez votre message ici"></textarea>
+                    <label for="telephone">Téléphone : </label>
+                    <input type="tel" name="telephone" id="telephone" required placeholder="Ecrivez votre numéro ici" />
                 </div>
+                <div class="select">
+                    <label for="objet">Votre message concerne :</label>
+                    <select id="objet">
+                        <option value="" disabled selected>Sélectionnez parmi ces choix</option>
+                        <option value="1">Un oeuvre</option>
+                        <option value="2">Une commande</option>
+                        <option value="3">Autre chose</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend class="small-text">Vous êtes déjà venu.e dans nos magasins à...</legend>
+                    <div>
+                        <input type="checkbox" id="montreuil" name="montreuil" checked />
+                        <label for="montreuil">Montreuil</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="paris" name="paris" />
+                        <label for="paris">Paris 15ème</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="bordeaux" name="bordeaux" />
+                        <label for="bordeaux">Bordeaux</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="marseille" name="marseille" />
+                        <label for="marseille">Marseille</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="small-text">Souhaitez-vous être rappelé ?</legend>
+                    <div>
+                        <input type="radio" id="1" name="radio-button" value="Oui" checked />
+                        <label for="1">Oui</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="0" name="radio-button" value="Non" />
+                        <label for="0">Non</label>
+                    </div>
+                </fieldset>
+
                 <div class="form-item">
                     <input class="btn-primary" type="submit" value="Envoyer" />
                 </div>
@@ -103,13 +158,9 @@
             </form>
         </div>
     </div>
+
     <footer>
-        <div class="container">
-            <div class="col"> <img src="https://placehold.co/600x400" class="img-cover img-50" /></div>
-            <div class="col"> <img src="https://placehold.co/600x400" class="img-cover img-50" /></div>
-            <div class="col"> <img src="https://placehold.co/600x400" class="img-cover img-50" /></div>
-            <div class="col"> <img src="https://placehold.co/600x400" class="img-cover img-50" /></div>
-        </div>
+        <p class="text-center white-color small-text">&copy; Librairie de Croix de Chavaux 2024</p>
     </footer>
 </body>
 

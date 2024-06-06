@@ -5,11 +5,33 @@ $font-family: "Poppins", sans-serif;
 //Fonts 
 $dflt-font-size: 62.5%;
 
+%font-thin {
+    font-weight: 100;
+    font-style: normal;
+}
+
+%font-light {
+    font-weight: 300;
+    font-style: normal;
+}
+
+%font-regular {
+    font-weight: 400;
+    font-style: normal;
+}
+
+%font-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 // Colors for fonts and other elements (badges, background, etc)
-$primary-color: #a17007;
-$secondary-color: #664875;
+$primary-color: #eb9133;
+$secondary-color: #1e1e1f;
 $general-bg-color: #ffffff;
-$navbar-bg-color: #ffe7b4;
+$navbar-bg-color: #ffffff;
+
 
 /* Breakpoints */
 $xl: 87.5em; // 4k and hi-res desktop

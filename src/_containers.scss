@@ -51,10 +51,13 @@
 .main {
     width: 100%;
 
-    margin: 120px auto 0px auto;
-
-
+    div.bg-container:first-of-type,
+    &>div.container:first-of-type {
+        padding: 120px 0px;
+    }
 }
+
+
 
 
 
@@ -92,6 +95,9 @@
             justify-content: start;
             @include dynamicWidth;
 
+            &.col-items-centered {
+                justify-content: center;
+            }
 
         }
 

@@ -1,5 +1,4 @@
 @use 'config' as *;
-@use 'fonts' as *;
 @use 'containers' as *;
 
 //common classes
@@ -8,12 +7,40 @@
     padding: 0;
 }
 
+.pad-top-5 {
+    padding-top: 5%;
+}
+
 .rounded {
     @include radiusStyle(25);
 }
 
 .display-none {
     display: none;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.secondary-color {
+    color: $secondary-color;
+}
+
+.white-color {
+    color: #ffffff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    @extend .text-center;
+
+    @include responsive($lg) {
+        text-align: left;
+    }
 }
 
 // end common classes
@@ -34,7 +61,6 @@ body {
 /* Fonts*/
 a,
 a:hover,
-a:visited,
 a:active {
     text-decoration: none;
     color: $primary-color;
@@ -239,6 +265,7 @@ fieldset div {
     @extend %font-regular;
     width: 100%;
     text-align: center;
+    height: 50px;
 
 
     @include responsive($md) {
@@ -273,7 +300,9 @@ input[type]:not([type=search]):not([type=url]):not([type=hidden]):not([type=subm
     border-left: 0px;
     border-right: 0px;
     border-bottom: 1px;
+    height: 40px;
     border-color: $secondary-color;
+    background-color: transparent;
     border-style: solid;
     width: 100%;
 

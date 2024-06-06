@@ -30,8 +30,9 @@ Ce qu'on va retrouver dans ce répertoire simple niveau arborescence :
 Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera minimum 60em de largeur (grâce à la classe .main). 
 
 ## Des lignes et des colonnes
-* Le <body> contient un conteneur (div.container) qui définit les lignes de la page
-* Le conteneur div.container fait 100% de son parent, et peut contenir jusqu'à 4 colonnes (.col)
+* Le <body> contient un ou plusieurs conteneurs bg-container ou container. Le premier conteneur du body fait une marge entre le top de la page.
+* Pour avoir un conteneur 100%, on utilisera div.main-container.
+* Le conteneur div.container, quant à lui, fait 1000px en version bureau, et peut contenir jusqu'à 4 colonnes (.col)
 ```html
 <div class="container">
         <div class="col">
@@ -50,10 +51,21 @@ Par défaut, le body fera toujours 100% en mobile, et 1000px lorsqu'il fera mini
             </p>
         </div>
 ```
+## La barre de navigation
+La barre de navigation est gérée en 100% CSS (pas de JS inutile pour ce petit projet). Il est conseillé de la faire contenir max 5 éléments hors bouton de fin de menu.
+
+# Les textes
+* Les textes sont par défaut noirs.
+* Les couleurs et typos sont modifiables : dans le fichier _config.scss.
+* Il existe une classe .white-color qui peut être appliqué à tout élément recevant la propriété color.
+
 # Les images
-La taille des images est par défaut définit à 100% en largeur et leur hauteur dépend de la taille de l'affichage. Les images peuvent avoir l'attribut cover avec la classe .img-cover ou contain avec la classe .img-contains. On peut également appliquer un effet de rondeur aux bords d'une image avec la classe .rounded
+La taille des images est par défaut définit à 100% en largeur et leur hauteur dépend de la taille de l'affichage. Les images peuvent avoir l'attribut cover avec la classe .img-cover ou contain avec la classe .img-contains. On peut également appliquer un effet de rondeur aux bords d'une image avec la classe .rounded. J'ai créé quelques classes pour pouvoir définir la height des images (img-300, img-100, img-50)
 
 # Notes de réflexion/Suivi de développement
+* 04/06/2024
+  - Finitions : j'ai ajouté la plupart des composants que je souhaitais. J'ai aussi corrigé et améliorer certaines gestions de blocs
+  - Pour finir ce petit projet, je créer un site one-page pour une librairie fictive
 * 27/05/2024
   - Mise en place de la navbar responsive en CSS uniquement 
 * 21/05/2024
